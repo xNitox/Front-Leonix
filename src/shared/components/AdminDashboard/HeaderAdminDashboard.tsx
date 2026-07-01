@@ -8,7 +8,7 @@ export const HeaderAdminDashboard = () => {
       <div>
         <TittleApp/>
         <div>
-          <Button texto="Agregar cajero" ruta="../agregar-cajero" style = {B_STYLE }/>
+          <Button texto="Agregar nuevo personal" ruta="../agregar-personal" style = {B_STYLE }/>
         </div>
     </div>
   )
