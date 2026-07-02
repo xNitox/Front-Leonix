@@ -19,6 +19,10 @@ export const loginApi = async (user: string, password: string, rutCommerce?: str
         localStorage.setItem('email', data.user.email);
         /* Guardamos el objeto completo transformado a texto */
         localStorage.setItem('user', JSON.stringify(data.user))
+        if (data.user?.commerce_id) {
+
+            localStorage.setItem('commerce_id', JSON.stringify(data.user.commerce_id))
+        }
         console.log("¡Sesión de " + data.role + " guardada con éxito!");
         return data;
     } catch (error) {
@@ -26,3 +30,13 @@ export const loginApi = async (user: string, password: string, rutCommerce?: str
         throw error;
     }
 };
+
+
+export const getCommerceId = () => {
+    const user = localStorage.getItem('user');
+    if (!user) return null;
+
+    const parsedUser = JSON.parse(user);
+    return parsedUser.commerce_id ?? null;
+
+}
