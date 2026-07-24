@@ -3,6 +3,7 @@ import { Sale } from "../src/pages/Sale"
 import { Login } from "./pages/Login"
 import { AdminDashboard } from "./pages/AdminDashboard"
 import { CreateRolOfStaff } from "./pages/CreateRolOfStaff"
+import { RegisterCommerce } from "./pages/RegisterCommerce"
 
 
 
@@ -13,6 +14,7 @@ export const LeonixApp = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/admin-dashboard" element={<AdminDashboard/>}/>
       <Route path="/agregar-personal" element={<CreateRolOfStaff/>}/>
+      <Route path = "/registrar-comercio" element={<RegisterCommerce/>}/>
 
       
     </Routes>
