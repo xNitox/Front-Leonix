@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { loginApi } from "./auth.services";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 
 export const useAuth = () => {
@@ -24,10 +24,10 @@ export const useAuth = () => {
             if (data.role === 'owner') {
                 navigate('/admin-dashboard', { state: { data: name } })
                 setRoleAuth(role)
-            }else if (data.role === 'cashier'){
-                navigate('/cashier',{state: {data:name}})
-            }else{
-                console.error("Rol no encontrado",data.role)
+            } else if (data.role === 'cashier') {
+                navigate('/cashier', { state: { data: name } })
+            } else {
+                console.error("Rol no encontrado", data.role)
             }
 
         }

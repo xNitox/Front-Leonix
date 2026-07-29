@@ -1,9 +1,10 @@
-import { Route, Routes } from "react-router-dom"
+
 import { Sale } from "../src/pages/Sale"
 import { Login } from "./pages/Login"
 import { AdminDashboard } from "./pages/AdminDashboard"
 import { CreateRolOfStaff } from "./pages/CreateRolOfStaff"
 import { RegisterCommerce } from "./pages/RegisterCommerce"
+import { Route, Routes } from "react-router"
 
 
 
